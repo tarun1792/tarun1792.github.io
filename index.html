@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tarun Kaushik — iOS engineer @ Uber</title>
+  <meta name="description" content="Portfolio & intro page of Tarun Kaushik — iOS Developer, Python enthusiast, and ethical hacker." />
+  <meta property="og:title" content="Tarun Kaushik — iOS engineer @ Uber" />
+  <meta property="og:description" content="iOS engineer @ Uber • Python • Security. Projects, certifications, and contact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tarun1792.github.io" />
+  <meta property="og:image" content="https://tarun1792.github.io/og-image.png" />
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system"],
+          },
+          boxShadow: {
+            soft: "0 10px 40px -10px rgb(0 0 0 / 0.2)",
+          },
+        },
+      },
+      darkMode: 'class',
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    // Persisted dark mode
+    const themeKey = 'preferred-theme';
+    function setTheme(t){
+      const root = document.documentElement;
+      if(t === 'dark'){ root.classList.add('dark'); localStorage.setItem(themeKey,'dark'); }
+      else { root.classList.remove('dark'); localStorage.setItem(themeKey,'light'); }
+    }
+    (function(){
+      const saved = localStorage.getItem(themeKey);
+      if(saved){ setTheme(saved); }
+      else if(window.matchMedia('(prefers-color-scheme: dark)').matches){ setTheme('dark'); }
+    })();
+  </script>
+  <style>
+    .tag { @apply px-3 py-1 rounded-full text-xs font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-200; }
+    .card { @apply rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/70 backdrop-blur shadow-soft; }
+    .btn {
+      @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl font-semibold border border-zinc-300 dark:border-zinc-700 hover:-translate-y-0.5 transition-all;
+    }
+    .btn-primary { @apply bg-black text-white dark:bg-white dark:text-black; }
+    .section-title { @apply text-2xl md:text-3xl font-extrabold tracking-tight; }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tarun Kaushik",
+    "jobTitle": "iOS Engineer",
+    "description": "iOS Developer, Python enthusiast, and ethical hacker.",
+    "url": "https://tarun1792.github.io",
+    "sameAs": [
+      "https://github.com/tarun1792",
+      "https://www.linkedin.com/in/tarun-kaushik"
+    ]
+  }
+  </script>
+</head>
+<body class="bg-gradient-to-b from-zinc-50 to-white dark:from-zinc-950 dark:to-zinc-900 text-zinc-900 dark:text-zinc-100">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/70 dark:bg-zinc-900/60 backdrop-blur border-b border-zinc-200 dark:border-zinc-800">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <img class="w-9 h-9 rounded-xl ring-1 ring-zinc-200 dark:ring-zinc-800 object-cover" src="/avatar.jpg" alt="Tarun Kaushik avatar" />
+        <div class="leading-tight">
+          <div class="font-extrabold">Tarun Kaushik</div>
+          <div class="text-xs text-zinc-500 dark:text-zinc-400">iOS • Python • Security</div>
+        </div>
+      </a>
+      <nav class="hidden sm:flex items-center gap-2">
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn" href="#skills">Skills</a>
+        <a class="btn" href="#writing">Certifications</a>
+        <a class="btn" href="#contact">Contact</a>
+        <button class="btn" onclick="setTheme(document.documentElement.classList.contains('dark') ? 'light' : 'dark')" title="Toggle theme" aria-label="Toggle theme">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364 6.364-1.414-1.414M7.05 7.05 5.636 5.636m12.728 0-1.414 1.414M7.05 16.95l-1.414 1.414"/>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-5 gap-10 items-center">
+      <div class="md:col-span-3">
+        <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-[1.05]">
+          Hi, I’m <span class="bg-clip-text text-transparent bg-gradient-to-r from-zinc-900 to-zinc-600 dark:from-white dark:to-zinc-400">Tarun Kaushik</span> 👋
+        </h1>
+        <p class="mt-5 text-lg md:text-xl text-zinc-600 dark:text-zinc-300 leading-relaxed">
+          <em>iOS engineer @ Uber</em>. Crafting iOS apps • Breaking (and fixing) things ethically • Python keeps me sane.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <span class="tag">Swift</span>
+          <span class="tag">UIKit</span>
+          <span class="tag">SwiftUI</span>
+          <span class="tag">RxSwift</span>
+          <span class="tag">Python</span>
+          <span class="tag">Xcode</span>
+          <span class="tag">iOS Development</span>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a class="btn btn-primary" href="#contact">Contact</a>
+          <a class="btn" href="https://github.com/tarun1792" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/tarun-kaushik" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <div class="md:col-span-2">
+        <div class="card p-3">
+          <img class="rounded-2xl object-cover w-full h-72" src="/hero.jpg" alt="Banner image" />
+        </div>
+        <p class="mt-3 text-sm text-zinc-500 dark:text-zinc-400">Delhi & Bangalore, India • Open to Collabs, Mentoring</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Stats -->
+  <section class="max-w-5xl mx-auto px-4">
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="card p-5">
+        <div class="text-3xl font-black">6+</div>
+        <div class="text-sm text-zinc-500 dark:text-zinc-400">years in iOS & security</div>
+      </div>
+      <div class="card p-5">
+        <div class="text-3xl font-black">APPS</div>
+        <div class="text-sm text-zinc-500 dark:text-zinc-400">apps shipped / features led</div>
+      </div>
+      <div class="card p-5">
+        <div class="text-3xl font-black">OSS</div>
+        <div class="text-sm text-zinc-500 dark:text-zinc-400">open‑source libraries / talks</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="max-w-5xl mx-auto px-4 mt-16">
+    <h2 class="section-title">Featured Projects</h2>
+    <p class="mt-3 text-zinc-600 dark:text-zinc-300">A few things I’ve built or maintained.</p>
+    <div class="grid md:grid-cols-3 gap-5 mt-6">
+      <!-- Project: Secure iOS -->
+      <article class="card overflow-hidden">
+        <img src="/project-1.jpg" alt="Secure iOS thumbnail" class="w-full h-40 object-cover">
+        <div class="p-5">
+          <h3 class="font-bold text-lg">Secure iOS</h3>
+          <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-300">Security‑focused iOS project. Hardening, runtime protections, and secure‑by‑default patterns (details coming soon).</p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="tag">Swift</span>
+            <span class="tag">Security</span>
+          </div>
+          <div class="mt-4 flex gap-3">
+            <a class="btn" href="https://github.com/tarun1792?tab=repositories" target="_blank" rel="noreferrer">Repos</a>
+          </div>
+        </div>
+      </article>
+      <!-- Add more projects as needed -->
+      <article class="card overflow-hidden">
+        <img src="/project-2.jpg" alt="Project thumb" class="w-full h-40 object-cover">
+        <div class="p-5">
+          <h3 class="font-bold text-lg">Project Name</h3>
+          <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-300">Brief description and outcomes (perf, adoption, reliability).</p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="tag">SwiftUI</span>
+            <span class="tag">Combine</span>
+          </div>
+          <div class="mt-4 flex gap-3">
+            <a class="btn" href="#" target="_blank" rel="noreferrer">Repo</a>
+            <a class="btn" href="#" target="_blank" rel="noreferrer">Demo</a>
+          </div>
+        </div>
+      </article>
+      <article class="card overflow-hidden">
+        <img src="/project-3.jpg" alt="Project thumb" class="w-full h-40 object-cover">
+        <div class="p-5">
+          <h3 class="font-bold text-lg">Security Tool / Write‑up</h3>
+          <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-300">Ethical hacking / security research highlight with link.</p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="tag">Python</span>
+            <span class="tag">Security</span>
+          </div>
+          <div class="mt-4 flex gap-3">
+            <a class="btn" href="#" target="_blank" rel="noreferrer">Repo</a>
+            <a class="btn" href="#" target="_blank" rel="noreferrer">Article</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="max-w-5xl mx-auto px-4 mt-16">
+    <h2 class="section-title">Skills</h2>
+    <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="card p-5">
+        <h3 class="font-bold">iOS</h3>
+        <p class="text-sm text-zinc-600 dark:text-zinc-300 mt-2">Swift, UIKit, SwiftUI, RxSwift, Concurrency, Instruments, Xcode</p>
+      </div>
+      <div class="card p-5">
+        <h3 class="font-bold">Architecture</h3>
+        <p class="text-sm text-zinc-600 dark:text-zinc-300 mt-2">MVVM, RIBs, Modularization, Design Systems, Analytics</p>
+      </div>
+      <div class="card p-5">
+        <h3 class="font-bold">Backend & Scripting</h3>
+        <p class="text-sm text-zinc-600 dark:text-zinc-300 mt-2">Python, FastAPI/Flask, REST, CI/CD (GitHub Actions)</p>
+      </div>
+      <div class="card p-5">
+        <h3 class="font-bold">Security</h3>
+        <p class="text-sm text-zinc-600 dark:text-zinc-300 mt-2">Burp Suite, MobSF, Frida, Objection, Threat Modeling</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="writing" class="max-w-5xl mx-auto px-4 mt-16">
+    <h2 class="section-title">Certifications & Learning</h2>
+    <div class="mt-6 grid md:grid-cols-2 gap-4">
+      <article class="card p-5">
+        <h3 class="font-bold">iOS Development: Architecture</h3>
+        <p class="text-sm text-zinc-600 dark:text-zinc-300 mt-2">Designing robust app architectures and modular systems.</p>
+        <a class="btn mt-4" href="https://www.linkedin.com/learning/certificates/511c9b1270c450162119d3f4cf47c7e3cdac1920d78734511af030378f0a293d?trk=share_certificate" target="_blank" rel="noreferrer">View Certificate</a>
+      </article>
+      <article class="card p-5">
+        <h3 class="font-bold">iOS Development: Security</h3>
+        <p class="text-sm text-zinc-600 dark:text-zinc-300 mt-2">App hardening, secure storage, network security, and testing.</p>
+        <a class="btn mt-4" href="https://www.linkedin.com/learning/certificates/95324191093cc339d91addde8b9ace1bbc605b90044cb424137eb07a02489467?trk=share_certificate" target="_blank" rel="noreferrer">View Certificate</a>
+      </article>
+      <article class="card p-5">
+        <h3 class="font-bold">Threading & Grand Central Dispatch</h3>
+        <p class="text-sm text-zinc-600 dark:text-zinc-300 mt-2">Concurrency patterns and performance on iOS.</p>
+        <a class="btn mt-4" href="https://www.linkedin.com/learning/certificates/66391dd525975b584f07269c4a151b4c48cf6423c33b48729101d24284c53822?trk=share_certificate" target="_blank" rel="noreferrer">View Certificate</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-5xl mx-auto px-4 mt-16 mb-24">
+    <div class="card p-6 md:p-8">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div>
+          <h2 class="section-title">Let’s build something</h2>
+          <p class="mt-2 text-zinc-600 dark:text-zinc-300">Email me or reach out on socials. I’m open to collaborations and mentoring.</p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a class="btn btn-primary" href="mailto:tarun1792@gmail.com">Email</a>
+          <a class="btn" href="https://www.linkedin.com/in/tarun-kaushik" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn" href="https://github.com/tarun1792" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="max-w-5xl mx-auto px-4 pb-12 text-sm text-zinc-500 dark:text-zinc-400">
+    © <span id="y"></span> Tarun Kaushik. Built with ❤️ using Tailwind. <a class="underline" href="https://github.com/tarun1792/tarun1792.github.io">Source</a>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
